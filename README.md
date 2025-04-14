@@ -15,25 +15,25 @@
   <img src="https://github.com/user-attachments/assets/b87b9974-39df-4f9c-b925-dac34b0dee5f" width="700" height="300">
 
 ### 2. **영화 예매**
-- 영화, 날짜, 시간 선택
+- 영화, 날짜, 시간 선택<br>
   <img src="https://github.com/user-attachments/assets/f3f37939-20e5-43e0-a580-128f7cb824ea" width="700" height="300">
-- 좌석 선택 (청소년/성인 인원 구분)
+- 좌석 선택 (청소년/성인 인원 구분)<br>
   <img src="https://github.com/user-attachments/assets/bdd516d6-32ac-4139-87cc-be1cdbf8313b" width="700" height="300">
-- 결제 전 정보 확인
+- 결제 전 정보 확인<br>
   <img src="https://github.com/user-attachments/assets/7c0e1830-9773-4f05-b53c-d530c9042201" width="600" height="450">
 - KakaoPay / TossPayments 연동 결제
 - 예매 성공/실패 처리 및 예매 내역 저장
 
 ### 3. **영화 정보**
 - **일일 / 주간 박스오피스** (KOFIC API)
-- 인기 영화 **Top10 롤링 배너**
+- 인기 영화 **Top10 롤링 배너**<br>
   <img src="https://github.com/user-attachments/assets/dddfd085-6515-46e7-8aae-8fb3a6708b03" width="700" height="300">
 - 검색 자동완성 기능
 - 영화 상세 정보 (TMDB API 활용)
 
 ### 4. **게시판**
 - 글 작성, 수정, 삭제, 조회 (CRUD)
-- 댓글, 대댓글 기능
+- 댓글, 대댓글 기능<br>
   <img src="https://github.com/user-attachments/assets/385cea66-970f-44eb-a234-c870b2b092c7" width="500" height="500">
 - 게시글 카테고리 필터 및 검색
 
