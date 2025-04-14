@@ -5,19 +5,6 @@
 
 ---
 
-## 🛠 사용 기술
-
-- **Backend**: Java, Spring Framework, MyBatis  
-- **Frontend**: HTML, CSS, JavaScript, JSP  
-- **Database**: Oracle  
-- **API 연동**:  
-  - TMDB API (영화 상세 정보)  
-  - KOFIC API (박스오피스)  
-  - KakaoPay, TossPayments (결제 시스템)  
-- **형상관리**: Git, GitHub
-
----
-
 ## ✅ 주요 기능
 
 ### 1. **회원 기능**
@@ -46,5 +33,18 @@
 ### 5. **기타 예외 처리**
 - 로그인하지 않은 사용자가 글쓰기, 댓글, 마이페이지 접근 시 alert 처리
 - 잘못된 접근 시 에러 페이지 또는 메시지 처리
+
+---
+
+## 🛠 사용 기술
+
+- **Backend**: Java, Spring Framework, MyBatis  
+- **Frontend**: HTML, CSS, JavaScript, JSP  
+- **Database**: Oracle  
+- **API 연동**:  
+  - TMDB API (영화 상세 정보)  
+  - KOFIC API (박스오피스)  
+  - KakaoPay, TossPayments (결제 시스템)  
+- **형상관리**: Git, GitHub
 
 ---
