@@ -20,7 +20,7 @@
 - 좌석 선택 (청소년/성인 인원 구분)
   <img src="https://github.com/user-attachments/assets/bdd516d6-32ac-4139-87cc-be1cdbf8313b" width="700" height="300">
 - 결제 전 정보 확인
-  <img src="https://github.com/user-attachments/assets/7c0e1830-9773-4f05-b53c-d530c9042201" width="500" height="500">
+  <img src="https://github.com/user-attachments/assets/7c0e1830-9773-4f05-b53c-d530c9042201" width="600" height="450">
 - KakaoPay / TossPayments 연동 결제
 - 예매 성공/실패 처리 및 예매 내역 저장
 
