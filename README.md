@@ -11,8 +11,8 @@
 - 일반 회원가입 및 로그인
 - 카카오 로그인
 - 마이페이지(내 정보 수정, 예매 내역, 내가 쓴 글)
-  <img src="https://github.com/user-attachments/assets/5f4c286e-ae00-4da9-a495-bb7c64153999" width="800" height="350">
-  <img src="https://github.com/user-attachments/assets/b87b9974-39df-4f9c-b925-dac34b0dee5f" width="800" height="350">
+  <img src="https://github.com/user-attachments/assets/5f4c286e-ae00-4da9-a495-bb7c64153999" width="700" height="300">
+  <img src="https://github.com/user-attachments/assets/b87b9974-39df-4f9c-b925-dac34b0dee5f" width="700" height="300">
 
 ### 2. **영화 예매**
 - 영화, 날짜, 시간 선택
