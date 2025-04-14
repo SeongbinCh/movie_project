@@ -20,7 +20,7 @@
 - 좌석 선택 (청소년/성인 인원 구분)
   <img src="https://github.com/user-attachments/assets/bdd516d6-32ac-4139-87cc-be1cdbf8313b" width="700" height="300">
 - 결제 전 정보 확인
-  <img src="https://github.com/user-attachments/assets/7c0e1830-9773-4f05-b53c-d530c9042201" width="700" height="300">
+  <img src="https://github.com/user-attachments/assets/7c0e1830-9773-4f05-b53c-d530c9042201" width="500" height="500">
 - KakaoPay / TossPayments 연동 결제
 - 예매 성공/실패 처리 및 예매 내역 저장
 
@@ -34,7 +34,7 @@
 ### 4. **게시판**
 - 글 작성, 수정, 삭제, 조회 (CRUD)
 - 댓글, 대댓글 기능
-  <img src="https://github.com/user-attachments/assets/385cea66-970f-44eb-a234-c870b2b092c7" width="700" height="300">
+  <img src="https://github.com/user-attachments/assets/385cea66-970f-44eb-a234-c870b2b092c7" width="500" height="500">
 - 게시글 카테고리 필터 및 검색
 
 ### 5. **기타 예외 처리**
