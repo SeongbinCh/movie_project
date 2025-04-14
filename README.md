@@ -38,12 +38,12 @@
 
 ## 🛠 사용 기술
 
-- **Backend**: Java, Spring Framework, MyBatis  
+- **Backend**: Java, Spring Framework(Spring MVC), MyBatis  
 - **Frontend**: HTML, CSS, JavaScript, JSP  
-- **Database**: Oracle  
+- **Database**: Oracle, SQL Developer
 - **API 연동**:  
-  - TMDB API (영화 상세 정보)  
-  - KOFIC API (박스오피스)  
+  - TMDB API (영화 포스터)  
+  - KOFIC API (영화 상세 정보 및 박스오피스)  
   - KakaoPay, TossPayments (결제 시스템)  
 - **형상관리**: Git, GitHub
 
