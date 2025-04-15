@@ -32,10 +32,9 @@
 - 예매 성공/실패 처리 및 예매 내역 저장
 
 ### 3. **영화 정보**
-- **일일 / 주간 박스오피스** (KOFIC API)
+- **일일 / 주간 박스오피스** (KOFIC API)<br>
   <img src="https://github.com/user-attachments/assets/0ee265aa-d94e-4980-a770-0a2adfc4c3fc" width="700" height="300">
 - 인기 영화 **Top10 롤링 배너**<br>
-  <img src="https://github.com/user-attachments/assets/dddfd085-6515-46e7-8aae-8fb3a6708b03" width="700" height="300">
 - 검색 자동완성 기능
 - 영화 상세 정보 (TMDB API 활용)
 
