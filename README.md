@@ -5,6 +5,13 @@
 
 ---
 
+## 🖼 메인 화면
+<img src="https://github.com/user-attachments/assets/dddfd085-6515-46e7-8aae-8fb3a6708b03" width="700" height="300">
+
+> 사용자가 가장 먼저 접하는 화면으로, 영화 검색, TOP10 롤링배너, 예매 메뉴 등을 제공합니다.
+
+---
+
 ## ✅ 주요 기능
 
 ### 1. **회원 기능**
@@ -26,6 +33,7 @@
 
 ### 3. **영화 정보**
 - **일일 / 주간 박스오피스** (KOFIC API)
+  <img src="https://github.com/user-attachments/assets/0ee265aa-d94e-4980-a770-0a2adfc4c3fc" width="700" height="300">
 - 인기 영화 **Top10 롤링 배너**<br>
   <img src="https://github.com/user-attachments/assets/dddfd085-6515-46e7-8aae-8fb3a6708b03" width="700" height="300">
 - 검색 자동완성 기능
