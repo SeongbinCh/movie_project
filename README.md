@@ -1,8 +1,9 @@
 # 🎬 영화 예매 사이트
 
-**신입 백엔드 개발자 포트폴리오용으로 제작한 영화 예매 웹사이트입니다.**  
-일반 회원 로그인, 카카오 로그인, 영화 예매 및 결제, 게시판, 마이페이지 등 다양한 기능을 구현했습니다.
+## 프로젝트 소개
 
+이 영화 예매 사이트는 **영화 예매, 결제, 회원 관리, 영화 정보 제공, 게시판 CRUD** 등을 구현한 웹 애플리케이션입니다. 
+사이트는 Spring Framework와 MyBatis를 기반으로 개발되었으며, KOFIC API를 통해 실시간 박스오피스를 제공합니다.
 ---
 
 ## 🖼 메인 화면
@@ -24,10 +25,13 @@
 ### 2. **영화 예매**
 - 영화, 날짜, 시간 선택<br>
   <img src="https://github.com/user-attachments/assets/f3f37939-20e5-43e0-a580-128f7cb824ea" width="700" height="300">
+  > 영화, 날짜, 시간을 선택 후 좌석선택 버튼을 누릅니다
 - 좌석 선택 (청소년/성인 인원 구분)<br>
   <img src="https://github.com/user-attachments/assets/bdd516d6-32ac-4139-87cc-be1cdbf8313b" width="700" height="300">
+  > 청소년/성인 인원을 선택 후 좌석을 고릅니다 고른 후 결제 버튼을 누릅니다
 - 결제 전 정보 확인<br>
   <img src="https://github.com/user-attachments/assets/7c0e1830-9773-4f05-b53c-d530c9042201" width="600" height="450">
+  > 결제 정보 확인 후 결제 버튼을 눌러 팝업 창에서 카카오페이/토스페이 중에서 골라 결제를 진행합니다
 - KakaoPay / TossPayments 연동 결제
 - 예매 성공/실패 처리 및 예매 내역 저장
 
