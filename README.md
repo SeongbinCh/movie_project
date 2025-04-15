@@ -42,7 +42,6 @@
 - 글 작성, 수정, 삭제, 조회 (CRUD)
 - 댓글, 대댓글 기능<br>
   <img src="https://github.com/user-attachments/assets/385cea66-970f-44eb-a234-c870b2b092c7" width="500" height="500">
-- 게시글 카테고리 필터 및 검색
 
 ### 5. **기타 예외 처리**
 - 로그인하지 않은 사용자가 글쓰기, 댓글, 마이페이지 접근 시 alert 처리
