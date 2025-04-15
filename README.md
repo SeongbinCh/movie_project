@@ -25,7 +25,7 @@ Spring Framework와 MyBatis를 기반으로 개발되었으며, KOFIC API를 통
 ### 2. **영화 예매**
 - 영화, 날짜, 시간 선택<br>
   <img src="https://github.com/user-attachments/assets/f3f37939-20e5-43e0-a580-128f7cb824ea" width="700" height="300">
-  - 영화, 날짜, 시간을 선택한 후 **[좌석 선택]** 버튼을 클릭합니다.<br>
+  - 영화, 날짜, 시간을 선택한 후 **[좌석 선택]** 버튼을 클릭합니다.<p>
 - 좌석 선택 (청소년/성인 인원 구분)<br>
   <img src="https://github.com/user-attachments/assets/bdd516d6-32ac-4139-87cc-be1cdbf8313b" width="700" height="300">
   - 인원(청소년/성인)을 선택한 후 원하는 좌석을 선택하고 **[결제]** 버튼을 누릅니다.<br>
