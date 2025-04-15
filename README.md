@@ -28,10 +28,10 @@ Spring Framework와 MyBatis를 기반으로 개발되었으며, KOFIC API를 통
   - 영화, 날짜, 시간을 선택한 후 **[좌석 선택]** 버튼을 클릭합니다.<p>
 - 좌석 선택 (청소년/성인 인원 구분)<br>
   <img src="https://github.com/user-attachments/assets/bdd516d6-32ac-4139-87cc-be1cdbf8313b" width="700" height="300">
-  - 인원(청소년/성인)을 선택한 후 원하는 좌석을 선택하고 **[결제]** 버튼을 누릅니다.<br>
+  - 인원(청소년/성인)을 선택한 후 원하는 좌석을 선택하고 **[결제]** 버튼을 누릅니다.<p>
 - 결제 전 정보 확인<br>
   <img src="https://github.com/user-attachments/assets/7c0e1830-9773-4f05-b53c-d530c9042201" width="600" height="450">
-  - 결제 전 예매 정보를 확인한 뒤, **카카오페이 또는 토스페이**를 선택하여 팝업 창에서 결제를 진행합니다.<br>
+  - 결제 전 예매 정보를 확인한 뒤, **카카오페이 또는 토스페이**를 선택하여 팝업 창에서 결제를 진행합니다.<p>
 - KakaoPay / TossPayments 연동 결제
 - 예매 성공/실패 처리 및 예매 내역 저장
 
