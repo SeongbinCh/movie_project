@@ -19,6 +19,7 @@ public interface CommunityMapper {
 	public int reviewModify( ReviewBoardDTO dto );
 	public int reviewDelete( int review_no );
 	public List<ReviewBoardDTO> getUserPosts(@Param("memberId") int memberId);
+	public void deleteReview(Integer memberId);
 	
 	// 게시글 댓글 관련
 	public List<ReviewRepDTO> reviewReplyList( @Param("review_no") int review_no, @Param("s") int start, @Param("e") int end );

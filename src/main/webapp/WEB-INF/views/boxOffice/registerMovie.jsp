@@ -45,9 +45,12 @@
 	}
 	
 	.booking_box {
+		display: flex;
+		justify-content: center;
+		align-items: center;
 		width: 600px;
-		height: 500px;
-		margin: 15px;
+		height: 400px;
+		margin: 50px auto;
 		border: 1px solid black;
 	}
 	
@@ -66,6 +69,24 @@
 		padding: 8px;
 		border: 1px solid #ccc;
 		border-radius: 4px;
+	}
+	
+	.form-button {
+		display: flex;
+		justify-content: center;
+	}
+	
+	.form-button input[type="submit"],
+	.form-button button{
+		width: 120px; height: 50px;
+		margin-right: 20px;
+		border: 1px solid black;
+		border-radius: 0.5em;
+		background-color: white;
+	}
+	.form-button input[type="submit"]:hover,
+	.form-button button:hover{
+		background-color: #E6E6E6;
 	}
 </style>
 </head>
@@ -89,9 +110,13 @@
 		<div class="booking_box">
 			<form action="register_movie" method="post">
 				<div class="register_menu">
-					<label for="movieName" class="form_label">영화 제목</label>
-					<input type="text" id="movieName" class="form_input" name="movieName">
-				</div>
+	                <label for="movieName" class="form_label">영화 제목</label>
+	                <select id="movieName" name="movieName" class="form_input">
+	                	<c:forEach var="movie" items="${ dailyList }">
+	                		<option value="${ movie.movieNm }">${ movie.movieNm }</option>
+	                	</c:forEach>
+	                </select>
+	            </div>
 		
 				<div class="register_menu">
 					<label for="movieShowDate" class="form_label">영화 상영 날짜</label>
@@ -103,9 +128,9 @@
 					<input type="text" id="movieShowTime" class="form_input" name="movieShowTime" >
 				</div>
 		
-				<button type="submit">
-					등록
-				</button>
+				<div class="form-button">
+					<input type="submit" value="등록">
+				</div>
 			</form>
 		</div>
 	</div>

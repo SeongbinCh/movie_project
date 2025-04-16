@@ -11,10 +11,11 @@
 		display: flex;
 		justify-content: center;
 	    width: 600px;
-	    height: 600px;
+	    height: 715px;
 	    margin: 50px auto;
-	    margin-top: 80px; 
+	    margin-top: 30px; 
 	    padding: 20px;
+	    padding-top: 50px;
 	    background: #f9f9f9;
 	    border-radius: 10px;
 	    box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.1);
@@ -69,6 +70,14 @@
 				<div class="form-group">
 	                <label for="id" class="form-label">작성자 아이디</label>
 	                <input type="text" id="id" name="id" class="form-control" value="${ userId }" readonly>
+	            </div>
+	            <div class="form-group">
+	                <label for="category" class="form-label">카테고리</label>
+	                <select id="category" name="category" class="form-control">
+	                	<c:forEach var="movie" items="${ dailyList }">
+	                		<option value="${ movie.movieNm }">${ movie.movieNm }</option>
+	                	</c:forEach>
+	                </select>
 	            </div>
 	            <div class="form-group">
 	                <label for="title" class="form-label">제목</label>

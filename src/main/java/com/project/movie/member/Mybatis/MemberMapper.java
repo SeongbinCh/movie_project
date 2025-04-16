@@ -13,4 +13,5 @@ public interface MemberMapper {
 	public MemberDTO getMemberInfo( int memberId );
 	public MemberDTO findByKakaoId(String kakaoId);
 	public void kakaoRegister(MemberDTO dto);
+	public void deleteMember(Integer memberId);
 }

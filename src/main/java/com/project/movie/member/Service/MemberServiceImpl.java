@@ -4,14 +4,20 @@ import java.util.HashMap;
 import java.util.Map;
 
 import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.security.crypto.password.PasswordEncoder;
 import org.springframework.stereotype.Service;
 
+import com.project.movie.booking.Mybatis.BookingMapper;
+import com.project.movie.community.Mybatis.CommunityMapper;
 import com.project.movie.member.DTO.MemberDTO;
 import com.project.movie.member.Mybatis.MemberMapper;
 
 @Service
 public class MemberServiceImpl implements MemberService{
-@Autowired MemberMapper mapper;
+	@Autowired CommunityMapper communitymapper;
+	@Autowired BookingMapper bookingmapper;
+	@Autowired MemberMapper mapper;
+	@Autowired private PasswordEncoder passwordEncoder;
 	
 	// 로그인 확인 메서드
 	public int login_chk( String id, String pwd ) {
@@ -19,7 +25,7 @@ public class MemberServiceImpl implements MemberService{
 		if( dto == null ) {
 			return 1;
 		}
-		if( dto.getPwd() == null || !dto.getPwd().equals( pwd ) ) {
+		if( dto.getPwd() == null || !passwordEncoder.matches(pwd, dto.getPwd()) ) {
 			return 2;
 		}
 		return 0;
@@ -36,6 +42,9 @@ public class MemberServiceImpl implements MemberService{
 	// 회원가입 처리 메서드
 	public int register( MemberDTO dto ) {
 		try {
+			String encodedPw = passwordEncoder.encode(dto.getPwd());
+			dto.setPwd(encodedPw);
+			
 			return mapper.register( dto );
 		} catch( Exception e ) {
 			e.printStackTrace();
@@ -66,5 +75,11 @@ public class MemberServiceImpl implements MemberService{
 	// 카카오 회원가입
 	public void kakaoRegister(MemberDTO dto) {
 		mapper.kakaoRegister(dto);
+	}
+	
+	public void deleteMember(Integer memberId) {
+		bookingmapper.deleteBooking(memberId);
+		communitymapper.deleteReview(memberId);
+		mapper.deleteMember(memberId);
 	}
 }

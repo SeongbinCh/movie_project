@@ -15,4 +15,5 @@ public interface BookingMapper {
 	public boolean updateSeatReservation(@Param("movieCd") String movieCd, @Param("showtimeId") Integer showtimeId, @Param("seatId") String seatId, @Param("memberId") Integer memberId);
 	public List<BookingListDTO> getBookingList(@Param("memberId") int memberId);
 	public int cancelBooking(@Param("seatId") String seatId);
+	public void deleteBooking(Integer memberId);
 }

@@ -100,6 +100,7 @@
 					<a href="${ contextPath }/member/mypageModifyView">내 정보 수정</a>
 					<a href="${ contextPath }/member/bookingHistoryView">영화 예매 내역</a>
 					<a href="${ contextPath }/member/postListView">등록한 게시글</a>
+					<a href="${ contextPath }/member/memberDelete">회원탈퇴</a>
 				</div>
 			</c:if>
 			<c:if test="${ isAdmin }">

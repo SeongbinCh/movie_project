@@ -173,6 +173,12 @@
 		    <version>2.13.0</version>
 		</dependency>
 	
+		<dependency>
+		    <groupId>org.springframework.security</groupId>
+		    <artifactId>spring-security-core</artifactId>
+		    <version>5.8.1</version> <!-- 너 프로젝트에 맞는 최신 버전 사용 -->
+		</dependency>
+		
 		<!-- Test -->
 		<dependency>
 			<groupId>junit</groupId>

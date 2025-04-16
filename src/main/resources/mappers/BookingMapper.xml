@@ -62,4 +62,9 @@
 		DELETE FROM movie_seat
 		WHERE seatId = #{seatId} AND memberId IS NOT NULL
 	</delete>
+	
+	<delete id="deleteBooking">
+		DELETE FROM movie_seat
+		WHERE memberId = #{memberId}
+	</delete>
 </mapper>

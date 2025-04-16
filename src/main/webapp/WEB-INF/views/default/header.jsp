@@ -203,7 +203,9 @@
 	        payment_failed: "${payment_failed}",
 	        payment_canceled: "${payment_canceled}",
 	        cancelSuccess: "${cancelSuccess}",
-	        cancelFailed: "${cancelFailed}"
+	        cancelFailed: "${cancelFailed}",
+	        addMovieMsg: "${addMovieMsg}",
+	        deleteMsg: "${deleteMsg}"
 	    };
 
 	    for (const [key, message] of Object.entries(messages)) {

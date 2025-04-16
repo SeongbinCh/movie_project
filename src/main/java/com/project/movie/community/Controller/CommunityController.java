@@ -18,6 +18,7 @@ import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RequestParam;
 import org.springframework.web.servlet.mvc.support.RedirectAttributes;
 
+import com.project.movie.boxOffice.Service.BoxOfficeService;
 import com.project.movie.common.LoginSession;
 import com.project.movie.community.DTO.ReviewBoardDTO;
 import com.project.movie.community.DTO.ReviewRepDTO;
@@ -27,6 +28,7 @@ import com.project.movie.member.DTO.MemberDTO;
 @Controller
 @RequestMapping("community")
 public class CommunityController {
+	@Autowired BoxOfficeService bs;
 	@Autowired CommunityService cs;
 	
 	// 게시글 리스트 가져오기
@@ -66,7 +68,7 @@ public class CommunityController {
 	@GetMapping("/reviewWritePage")
 	public String reviewWritePage(HttpSession session,
 								RedirectAttributes rs,
-								Model model) {
+								Model model) throws Exception {
 		String user = (String) session.getAttribute(LoginSession.LOGIN);
 		MemberDTO kakaoUser = (MemberDTO) session.getAttribute("loginMember");
 		
@@ -78,6 +80,11 @@ public class CommunityController {
 			userId = kakaoUser.getId();
 		}
 		
+		HashMap<String, Object> dailyResult = bs.getDailyBoxOffice();
+		Map<String, Object> boxOfficeResult = (Map<String, Object>) dailyResult.get("boxOfficeResult");
+		List<Map<String, Object>> dailyList = (List<Map<String, Object>>) boxOfficeResult.get("dailyBoxOfficeList");
+
+		model.addAttribute("dailyList", dailyList);
 		model.addAttribute("userId", userId);
 		
 		return "community/reviewWritePage";

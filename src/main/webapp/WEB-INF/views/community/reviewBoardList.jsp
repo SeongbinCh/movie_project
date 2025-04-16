@@ -17,7 +17,10 @@
 	}
 	.review_table {
 		border: 1px solid black;
-		margin: auto;
+	    width: 100%;
+	    max-width: 1200px;
+	    background-color: #fff;
+	    border-collapse: collapse;
 	}
 	
 	.table_tr:hover {
@@ -29,12 +32,19 @@
 		padding: 10px;
 		text-align: center;
 	}
+	
+	.review_table th {
+		background-color: #f8f8f8;
+	    font-weight: bold;
+	}
+	
 	.col-1 { width: 112px; }
-	.col-2 { width: 350px; }
-	.col-3 { width: 125px; }
-	.col-4 { width: 150px; }
-	.col-5 { width: 90px; }
-	.col-6 { width: 75px; }
+	.col-2 { width: 400px; }
+	.col-3 { width: 200px; }
+	.col-4 { width: 125px; }
+	.col-5 { width: 150px; }
+	.col-6 { width: 90px; }
+	.col-7 { width: 75px; }
 	
 	.pagination-wrapper {
 		display: flex;
@@ -50,7 +60,6 @@
 </style>
 </head>
 <body>
-
 	<div class="review_container">
 		<table class="review_table">
 			<colgroup>
@@ -60,24 +69,26 @@
 				<col class="col-4">
 				<col class="col-5">
 				<col class="col-6">
+				<col class="col-7">
 			</colgroup>
 			
 			<thead>
 				<tr>
-					<th>게시글 번호</th><th>제목</th><th>작성자 아이디</th><th>날짜</th><th>시간</th><th>조회수</th>
+					<th>게시글 번호</th><th>카테고리</th><th>제목</th><th>작성자 아이디</th><th>날짜</th><th>시간</th><th>조회수</th>
 				</tr>
 			</thead>
 			
 			<tbody>
 				<c:if test="${ empty list }">
 					<tr>
-						<th colspan="6"> 작성된 글이 없습니다.</th>
+						<th colspan="7"> 작성된 글이 없습니다.</th>
 					</tr>
 				</c:if>
 				
 				<c:forEach var="dto" items="${ list }">
 					<tr class="table_tr">
 						<td>${ dto.review_no }</td>
+						<td>${ dto.category }</td>
 						<td>
 							<a href="reviewContentPage?review_no=${ dto.review_no }">
 								${ dto.title }
@@ -92,14 +103,14 @@
 				
 				<tr>
 					<c:if test="${ not empty userId }">
-						<td colspan="6" style="text-align: right; padding-right: 20px;">
+						<td colspan="7" style="text-align: right; padding-right: 20px;">
 							<a href="reviewWritePage">글 작성</a>
 						</td>
 					</c:if>
 				</tr>
 			
 				<tr>
-					<td colspan="6">
+					<td colspan="7">
 						<div class="pagination-wrapper">
 							<nav aria-label="Page navigation example">
 								<ul class="pagination">

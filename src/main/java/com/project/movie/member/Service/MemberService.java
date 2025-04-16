@@ -11,4 +11,5 @@ public interface MemberService {
 	public int updateMemberInfo( MemberDTO dto );
 	public MemberDTO findByKakaoId(String kakaoId);
 	public void kakaoRegister(MemberDTO dto);
+	public void deleteMember(Integer memberId);
 }

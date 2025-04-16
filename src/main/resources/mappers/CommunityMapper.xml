@@ -6,6 +6,7 @@
 <mapper namespace="com.project.movie.community.Mybatis.CommunityMapper">
 	<resultMap type="com.project.movie.community.DTO.ReviewBoardDTO" id="review">
 		<result property="review_no" column="review_no" />
+		<result property="category" column="category" />
 		<result property="id" column="id" />
 		<result property="title" column="title" />
 		<result property="content" column="content" />
@@ -49,8 +50,8 @@
 	
 	<!-- 게시글 작성 -->
 	<insert id="writeReviewBoard">
-		INSERT INTO review_board(memberId, id, title, content)
-		VALUES ((SELECT memberId FROM members WHERE id = #{id}), #{id}, #{title}, #{content})
+		INSERT INTO review_board(memberId, category, id, title, content)
+		VALUES ((SELECT memberId FROM members WHERE id = #{id}), #{category}, #{id}, #{title}, #{content})
 	</insert>
 	
 	<!-- 게시글 내용 가져오기 -->
@@ -78,6 +79,11 @@
 	<delete id="reviewDelete">
 		DELETE FROM review_board
 		WHERE review_no = #{review_no}
+	</delete>
+	
+	<delete id="deleteReview">
+		DELETE FROM review_board
+		WHERE memberId = #{memberId}
 	</delete>
 	
 	<!--  -->

@@ -11,35 +11,71 @@
 		display: flex;
 		justify-content: center;
 		align-items: flex-start;
-		height: 100vh;
+		height: auto;
+		padding: 20px;
 	}
 	
 	.modify_table {
-		display: flex;
-		justify-content: center;
 		border: 1px solid black;
+		width: 100%;
+		max-width: 1500px;
+		background-color: #fff;
+		border-collapse: collapse;
+		margin-top: 20px;
 	}
 	
 	.modify_table th, .modify_table td {
 		border: 1px solid #ccc;
-		padding: 10px;
+		padding: 8px;
 		text-align: center;
+		font-size: 14px;
 	}
 	
-	.form-th {
-		width: 100px;
-	}
-	.form-td {
-		width: 500px;
+	.modify_table th {
+		background-color: #f8f8f8;
+		font-weight: bold;
 	}
 	
-	.form-input { 
-		width: 450px;
+	.col-1 { width: 75px; }
+	.col-2 { width: 50px; }
+	.col-3 { width: 125px; }
+	.col-4 { width: 150px; }
+	.col-5 { width: 100px; }
+	.col-6 { width: 300px; }
+	
+	button[type="button"],
+	button[type="submit"] {
+		display: inline-flex;
+	    align-items: center;
+	    justify-content: center;
+	    border: 1px solid #585858;
+	    background-color: transparent;
+	    color: #585858;
+	    border-radius: 0.25rem;
+	    height: 45px;
+	    width: 100px;
+	    padding: 0 10px;
+	    font-size: 14px;
+	}
+
+	button[type="button"]:hover,
+	button[type="submit"]:hover {
+	    background-color: #585858;
+	    color: white;
+	}
+	
+	.form-input {
+		width: 95%;
 		height: 30px;
+		padding: 4px;
+		font-size: 14px;
 	}
-	.form-content { 
-		width: 450px;
-		height: 250px;
+	.form-content {
+		width: 95%;
+		height: 200px;
+		padding: 8px;
+		font-size: 14px;
+		resize: none;
 	}
 </style>
 </head>
@@ -47,32 +83,34 @@
 	<div class="modify_container">
 		<form action="reviewModify" method="post">
 			<input type="hidden" name="review_no" value="${ dto.review_no }"> 
-		
 			<table class="modify_table">
+				<colgroup>
+					<col class="col-1">
+					<col class="col-2">
+					<col class="col-3">
+					<col class="col-4">
+					<col class="col-5">
+					<col class="col-6">
+				</colgroup>
 				<tr>
-					<th class="form-th">글번호</th>
-					<td style="width: 100px;">
-						${ dto.review_no }
-					</td>
-					<th style="width: 125px;">작성자 아이디</th>
-					<td style="width: 100px;">
-						${ dto.id }
-					</td>
+					<th>글번호</th><td>${ dto.review_no }</td>
+					<th>작성자 아이디</th><td>${ dto.id }</td>
+					<th>카테고리</th><td>${ dto.category }</td>
 				</tr>
 				<tr>
-					<th class="form-th">제목</th>
-					<td class="form-td" colspan="3">
+					<th>제목</th>
+					<td colspan="5">
 						<input type="text" name="title" class="form-input" value="${ dto.title }">
 					</td>
 				</tr>
 				<tr>
-					<th class="form-th">내용</th>
-					<td class="form-td" colspan="3">
+					<th>내용</th>
+					<td colspan="5">
 						<textarea name="content" class="form-content">${ dto.content }</textarea>
 					</td>
 				</tr>
 				<tr>
-					<td colspan="4">
+					<td colspan="6">
 						<div class="form-submit">
 							<button type="submit">수정</button>
 							<button type="button" onclick="history.back()">이전</button>

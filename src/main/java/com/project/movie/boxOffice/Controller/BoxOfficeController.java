@@ -5,6 +5,7 @@ import java.time.LocalDate;
 import java.util.Calendar;
 import java.util.HashMap;
 import java.util.List;
+import java.util.Map;
 
 import javax.servlet.ServletContext;
 import javax.servlet.http.HttpSession;
@@ -94,7 +95,7 @@ public class BoxOfficeController {
 	
 	// 영화 등록 페이지 메서드
 	@GetMapping("registerMovie")
-	public String registerMovie(HttpSession session, Model model, RedirectAttributes rs) {
+	public String registerMovie(HttpSession session, Model model, RedirectAttributes rs) throws Exception {
 		Boolean isAdmin = (Boolean) session.getAttribute("isAdmin");
 		Boolean isUser = (Boolean) session.getAttribute("isUser");
 		
@@ -109,15 +110,24 @@ public class BoxOfficeController {
 		String user = (String) session.getAttribute(LoginSession.LOGIN);
 		MemberDTO kakaoUser = (MemberDTO) session.getAttribute("loginMember");
 		
+		HashMap<String, Object> dailyResult = bs.getDailyBoxOffice();
+		Map<String, Object> boxOfficeResult = (Map<String, Object>) dailyResult.get("boxOfficeResult");
+		List<Map<String, Object>> dailyList = (List<Map<String, Object>>) boxOfficeResult.get("dailyBoxOfficeList");
+		
+		model.addAttribute("dailyList", dailyList);
+		
 		return "boxOffice/registerMovie";
 	}
 	
 	// 영화 등록 메서드
 	@PostMapping("register_movie")
 	public String register_movie( @RequestParam("movieName") String movieName,
-								@RequestParam("movieShowDate") @DateTimeFormat(pattern = "yyyy-MM-dd") LocalDate movieShowDate ,
-								@RequestParam("movieShowTime") String movieShowTime ) throws Exception {
+								@RequestParam("movieShowDate") @DateTimeFormat(pattern = "yyyy-MM-dd") LocalDate movieShowDate,
+								@RequestParam("movieShowTime") String movieShowTime,
+								RedirectAttributes rs) throws Exception {
 		bs.registerMovie(movieName, movieShowDate, movieShowTime);
+		
+		rs.addFlashAttribute("addMovieMsg", "영화가 등록되었습니다");
 		
 		return "redirect:registerMovie";
 	}

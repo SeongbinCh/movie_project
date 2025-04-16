@@ -19,7 +19,7 @@
 	.content_table {
 	    border: 1px solid black;
 	    width: 100%;
-	    max-width: 800px;
+	    max-width: 850px;
 	    background-color: #fff;
 	    border-collapse: collapse;
 	}
@@ -36,7 +36,7 @@
 	    font-weight: bold;
 	}
 	
-	.col-1 { width: 80px; }
+	.col-1 { width: 125px; }
 	.col-2 { width: 70px; }
 	.col-3 { width: 80px; }
 	.col-4 { width: 150px; }
@@ -171,6 +171,9 @@
 				<th>날짜</th><td>${ dto.review_date }</td>
 				<th>시간</th><td>${ dto.review_time }</td>
 				<th>조회수</th><td>${ dto.hit }</td>
+			</tr>
+			<tr>
+				<th>카테고리</th><td colspan="9">${ dto.category }</td>
 			</tr>
 			<tr>
 				<th>제목</th><td colspan="9">${ dto.title }</td>

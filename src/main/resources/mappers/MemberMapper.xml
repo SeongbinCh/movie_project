@@ -67,4 +67,9 @@
 		INSERT INTO members (id, kakao_id, name, mobile, email, is_kakao)
     	VALUES (#{kakaoId}, #{kakaoId}, #{name}, #{mobile}, #{email}, 1)
 	</insert>
+	
+	<delete id="deleteMember">
+		DELETE FROM members
+		WHERE memberId = #{memberId}
+	</delete>
 </mapper>

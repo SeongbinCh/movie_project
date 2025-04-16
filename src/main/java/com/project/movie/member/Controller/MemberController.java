@@ -347,9 +347,9 @@ public class MemberController {
 		if( result == 1 ) {
 			redirectAttributes.addFlashAttribute("membership", "회원가입이 완료되었습니다");
 			
-			return "redirect:login";
+			return "redirect:/member/login";
 		}
-		return "redirect:main";
+		return "redirect:/main";
 	}
 	
 	// 마이페이지 메서드
@@ -484,5 +484,24 @@ public class MemberController {
 		model.addAttribute("postList", postList);
 		
 		return "member/postListView";
+	}
+	
+	@GetMapping("memberDelete")
+	public String memberDelete(HttpSession session, RedirectAttributes rs) {
+		String user = (String) session.getAttribute(LoginSession.LOGIN);
+		MemberDTO kakaoUser = (MemberDTO) session.getAttribute("loginMember");
+		
+		if( user != null && kakaoUser != null ) {
+			rs.addFlashAttribute("loginError", "로그인을 해주세요");
+			return "redirect:/member/login";
+		}
+		
+		Integer memberId = (user != null) ? ms.getMemberIdById(user) : kakaoUser.getMemberId();
+		
+		ms.deleteMember(memberId);
+		rs.addFlashAttribute("deleteMsg", "회원탈퇴하였습니다");
+		session.invalidate();
+	
+		return "redirect:/main";
 	}
 }

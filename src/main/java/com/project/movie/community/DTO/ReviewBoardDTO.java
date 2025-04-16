@@ -6,7 +6,7 @@ import java.time.LocalTime;
 public class ReviewBoardDTO {
 	private int review_no;
 	private long hit;
-	private String id, title, content;
+	private String id, title, content, category;
 	private LocalDate review_date;
 	private LocalTime review_time;
 	
@@ -39,6 +39,12 @@ public class ReviewBoardDTO {
 	}
 	public void setContent(String content) {
 		this.content = content;
+	}
+	public String getCategory() {
+		return category;
+	}
+	public void setCategory(String category) {
+		this.category = category;
 	}
 	public LocalTime getReview_time() {
 		return review_time;
